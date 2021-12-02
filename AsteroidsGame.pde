@@ -22,13 +22,6 @@ public void draw() {
     if (key == 'd') {
       ok.turn(5);
     }
-    if (key == 'h') {
-      ok.myCenterX = (int)(Math.random()*800);
-      ok.myCenterY = (int)(Math.random()*600);
-      ok.myXspeed = 0;
-      ok.myYspeed = 0; 
-      ok.accelerate(0);
-    }
     if (key == ' '){
       ok.accelerate(0.1);
     }
