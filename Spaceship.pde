@@ -20,4 +20,15 @@ class Spaceship extends Floater
       myYspeed = 0;
       myPointDirection = 1;
     }
+  public void hyper() {
+    if (keyPressed) {
+      if (key == 'h') {
+        ok.myCenterX = (int)(Math.random()*800);
+        ok.myCenterY = (int)(Math.random()*600);
+        ok.myXspeed = 0;
+        ok.myYspeed = 0; 
+        ok.accelerate(0);
+      }
+    }
+  }
 }
