@@ -4,7 +4,6 @@ boolean collision = true;
 Star[] bob = new Star[200];
 Spaceship ok = new Spaceship();
 ArrayList <Asteroid> rock = new ArrayList <Asteroid>();
-ArrayList <Bullet> shots = new ArrayList <Bullet>();
 public void setup() {
   for (int i = 0; i < 15; i++)
     rock.add(i, new Asteroid());
@@ -26,9 +25,6 @@ public void keyPressed() {
   }
   if (key == 's') {
     ok.accelerate(-0.1);
-  }
-  if (key == ' ') {
-    shots.add(new Bullet(ok));
   }
 }
 public void draw() {
@@ -52,14 +48,6 @@ public void draw() {
     if (rock.size() < 15)
       rock.add(new Asteroid());
     float d = dist((float)ok.getX(), (float)ok.getY(), (float)rock.get(i).getX(), (float)rock.get(i).getY());
-    //for (int e = 0; e < shots.size(); e++) {
-    //  shots.get(e).show();
-    //  shots.get(e).move();
-    //}
-    //  float c = dist((float)shots.get(e).getX(), (float)shots.get(e).getY(), (float)rock.get(i).getX(), (float)rock.get(i).getY());
-    //  if (c < 25) {
-    //    rock.remove(i);
-    //  }
     if (collision == true) {
     }
     if (d < 25) {
